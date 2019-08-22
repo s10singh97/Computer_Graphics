@@ -2,7 +2,6 @@
 
 #include<bits/stdc++.h>
 #include<graphics.h>
-#include<X11/Xlib.h>
 using namespace std;
 
 int main()
@@ -60,7 +59,6 @@ int main()
     }
     
     delay(500000);
-    getch();
     closegraph();
     return 0;
 }
