@@ -17,58 +17,55 @@ int main()
     cin>>x1>>y1;
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
-    int p = int((float(5)/4) - r);
-    int x_curr = 0, y_curr = r;
-    putpixel(x_curr, y_curr, WHITE);
-    while(x_curr != y_curr)
+    //First Pint
+    int x=0,y=r;
+    putpixel(x+x1,y+y1,WHITE);
+    int p = 1-r;
+    while(x<=y)
     {
-        if(p < 0)
+        if(p<0)
         {
-            x_curr += 1;
-            p = p + (2*x_curr) + 1;
-            putpixel(x_curr + x1, -y_curr + y1, WHITE);
-            putpixel(y_curr + x1, x_curr + y1, WHITE);
-            putpixel(-y_curr + x1, x_curr + y1, WHITE);
+           x++;
+       
 
-            putpixel(x_curr + x1, y_curr + y1, WHITE);
-            putpixel(-x_curr + x1, y_curr + y1, WHITE);
-            putpixel(x_curr + x1, -y_curr + y1, WHITE);
-            putpixel(-x_curr + x1, -y_curr + y1, WHITE);
+            putpixel(x + x1 ,-y + y1,WHITE);
+            putpixel(y + x1 ,x + y1,WHITE);
+            putpixel(-y + x1 ,x + y1,WHITE);
 
-            putpixel(y_curr + x1, x_curr + y1, WHITE);
-            putpixel(-y_curr + x1, x_curr + y1, WHITE);
-            putpixel(y_curr + x1, -x_curr + y1, WHITE);
-            putpixel(-y_curr + x1, -x_curr + y1, WHITE);
-            
-            
-            // putpixel(x_curr, y_curr, WHITE);
-            // putpixel(y_curr, x_curr, WHITE);
-            // putpixel(x_curr, -y_curr, WHITE);
-            // putpixel(-x_curr, y_curr, WHITE);
+            putpixel(x + x1,y + y1,WHITE);
+            putpixel(-x + x1,y + y1,WHITE);
+            putpixel(x + x1,-y + y1,WHITE);
+            putpixel(-x + x1,-y + y1,WHITE);
+
+            putpixel(y + x1, x + y1,WHITE);
+            putpixel(-y + x1, x + y1,WHITE);
+            putpixel(y + x1, -x + y1,WHITE);
+            putpixel(-y + x1, -x + y1,WHITE);
+
+           
+           p=p+2*x+1;
         }
         else
         {
-            x_curr += 1;
-            y_curr -= 1;
-            p = p + (2*x_curr) + 1 - (2*y_curr);
-            putpixel(x_curr + x1, -y_curr + y1, WHITE);
-            putpixel(y_curr + x1, x_curr + y1, WHITE);
-            putpixel(-y_curr + x1, x_curr + y1, WHITE);
+            x++;
+            y--;
 
-            putpixel(x_curr + x1, y_curr + y1, WHITE);
-            putpixel(-x_curr + x1, y_curr + y1, WHITE);
-            putpixel(x_curr + x1, -y_curr + y1, WHITE);
-            putpixel(-x_curr + x1, -y_curr + y1, WHITE);
+            putpixel(x + x1 ,-y + y1,WHITE);
+            putpixel(y + x1 ,x + y1,WHITE);
+            putpixel(-y + x1 ,x + y1,WHITE);
 
-            putpixel(y_curr + x1, x_curr + y1, WHITE);
-            putpixel(-y_curr + x1, x_curr + y1, WHITE);
-            putpixel(y_curr + x1, -x_curr + y1, WHITE);
-            putpixel(-y_curr + x1, -x_curr + y1, WHITE);
-            
-            // putpixel(x_curr, y_curr, WHITE);
-            // putpixel(y_curr, x_curr, WHITE);
-            // putpixel(x_curr, -y_curr, WHITE);
-            // putpixel(-x_curr, y_curr, WHITE);
+            putpixel(x + x1,y + y1,WHITE);
+            putpixel(-x + x1,y + y1,WHITE);
+            putpixel(x + x1,-y + y1,WHITE);
+            putpixel(-x + x1,-y + y1,WHITE);
+
+            putpixel(y + x1, x + y1,WHITE);
+            putpixel(-y + x1, x + y1,WHITE);
+            putpixel(y + x1, -x + y1,WHITE);
+            putpixel(-y + x1, -x + y1,WHITE);
+
+        
+            p=p+2*x+1-2*y;
         }
     }
 
